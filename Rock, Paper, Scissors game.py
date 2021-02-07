@@ -3,14 +3,14 @@ print("Welcome to rock paper scissors.")
 
 game_store = ["Rock","Paper","Scissors"]
 
-plyer = 0
+player = 0
 computer = 0
 
 round_games = int(input("\nhow many round would you like to play: "))
 
 for i in range(1,round_games+1):
     print("\nround "+str(i))
-    print("player: "+str(plyer),"\tcomputer: "+str(computer))
+    print("player: "+str(player),"\tcomputer: "+str(computer))
 
 
     player_select = str(input("\nTime to pick....rock , paper , scissors: ").title().lstrip())
@@ -27,12 +27,12 @@ for i in range(1,round_games+1):
         print("\ncomputer win")
 
     elif player_select == game_store[0] and computer_select == game_store[2]:
-        plyer += 1
+        player += 1
         print("\nyou win in this round")
 
 
     elif player_select == game_store[1] and computer_select == game_store[0]:
-        plyer += 1
+        player += 1
         print("\nyou win in this round")
         
 
@@ -46,13 +46,13 @@ for i in range(1,round_games+1):
 
 
 
-if plyer < computer:
+if player < computer:
     result = "computer win"
     
-elif plyer > computer:
+elif player > computer:
     result = "you win"
 else:
     result = "equalize"
 
-print("\nFinal Game results. "+"\n\t\tRounds Played: "+str(round_games),"\n\t\tplayer score: "+str(plyer),"\n\t\tcomputer score: "+str(computer),"\n\t\t"+str(result))
+print("\nFinal Game results. "+"\n\t\tRounds Played: "+str(round_games),"\n\t\tplayer score: "+str(player),"\n\t\tcomputer score: "+str(computer),"\n\t\t"+str(result))
 
