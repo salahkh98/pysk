@@ -43,17 +43,29 @@ n_list = ["1","2","3","4","5","6","7","8","9"]
 
 draw_board(n_list)
 draw_board(c_list)
-while True:
+running = True
+while running:
     #player1 turn 
     move = get_player_input(player1, c_list)
     place_player_char(player1,move, c_list)
     if winner(player1, c_list):
         print("player1 is the winner.")
-        break
+        run_again = input("would you like to play again y/n : ")
+        if run_again == "y":
+            c_list = ["_"]*9
+        else:
+            print("good bye")
+            running = False
+            break
 
     elif "_" not in c_list:
         print("the game was tie!")
-        break
+        if run_again == "y":
+            c_list = ["_"]*9
+        else:
+            print("good bye")
+            running = False
+            break
     draw_board(n_list)
     draw_board(c_list)
     
@@ -62,10 +74,19 @@ while True:
     place_player_char(player2, move2, c_list)
     if winner(player2, c_list):
         print("player2 is the winner.")
-        break
+        if run_again == "y":
+            c_list = ["_"]*9
+        else:
+            print("good bye")
+            running = False
+            break
     elif "_" not in c_list:
         print("the game was tie!")
-        break
-
+        if run_again == "y":
+            c_list = ["_"]*9
+        else:
+            print("good bye")
+            running = False
+            break
     draw_board(n_list)
     draw_board(c_list)
