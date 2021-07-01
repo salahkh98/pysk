@@ -26,8 +26,8 @@ class Game():
     def build_deck(self):
         for suit in self.suits:
             for card , value in self.card_rank.items():
-                generat_cards = [card , value , suit]
-                self.deck.append(generat_cards)
+                generating_cards = [card , value , suit]
+                self.deck.append(generating_cards)
 
         random.shuffle(self.deck)
 
