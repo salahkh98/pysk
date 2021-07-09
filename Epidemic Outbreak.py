@@ -128,8 +128,8 @@ class Population():
             elif person.is_dead:
                 total_deaths_people +=1
         
-        infection_percent  = round(100*(total_infected_people / simulation.pop_size) , 4)
-        death_percent = round(100*(total_deaths_people / simulation.pop_size) , 4)
+        infection_percent  = round(100*(total_infected_people / simulation.pop_size) , 2)
+        death_percent = round(100*(total_deaths_people / simulation.pop_size) , 2)
 
         print("----day " + str(simulation.days) + "----")
         print()
